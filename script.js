@@ -99,7 +99,7 @@ function show(){
         booksObj = JSON.parse(books);
     }
     let tableBody = document.getElementById('tableBody');
-    let uiString;
+    let uiString = '';
     Array.from(booksObj).forEach(function(element,index){
         if(element.Name.length>0 && element.Author.length>0){
             uiString += `<tr><td>${element.Name}</td><td>${element.Author}</td><td>${element.Type}</td><td><button onclick="deleteBook(this.id)"class="btn btn-large btn-danger" id="${index}">Delete</button></td></tr>`;
